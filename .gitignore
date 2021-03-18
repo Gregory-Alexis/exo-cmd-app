@@ -1,0 +1,119 @@
+.vscode/
+node_modules/
+
+# Journaux
+journaux
+* .log
+npm-debug.log *
+yarn-debug.log *
+yarn-error.log *
+lerna-debug.log *
+
+# Rapports de diagnostic (https://nodejs.org/api/report.html)
+rapport. [ 0-9 ] * . [ 0-9 ] * . [ 0-9 ] * . [ 0-9 ] * .json
+
+# Données d'exécution
+pids
+* .pid
+* .seed
+* .pid.lock
+
+# Répertoire des bibliothèques instrumentées générées par jscoverage / JSCover
+lib-cov
+
+# Répertoire de couverture utilisé par des outils comme istanbul
+couverture
+* .lcov
+
+Couverture des tests # nyc
+.nyc_output
+
+# Stockage intermédiaire Grunt (https://gruntjs.com/creating-plugins#storing-task-files)
+.grognement
+
+# Répertoire de dépendances Bower (https://bower.io/)
+bower_components
+
+# configuration node-waf
+.lock-wscript
+
+# Addons binaires compilés (https://nodejs.org/api/addons.html)
+build / Release
+
+# Répertoires de dépendances
+node_modules /
+jspm_packages /
+
+# Répertoire de dépendances Snowpack (https://snowpack.dev/)
+web_modules /
+
+# Cache TypeScript
+* .tsbuildinfo
+
+# Répertoire de cache npm facultatif
+.npm
+
+# Cache eslint facultatif
+.eslintcache
+
+# Cache microbundle
+.rpt2_cache /
+.rts2_cache_cjs /
+.rts2_cache_es /
+.rts2_cache_umd /
+
+# Historique REPL facultatif
+.node_repl_history
+
+# Sortie de 'npm pack'
+* .tgz
+
+# Fichier d'intégrité du fil
+.yarn-intégrité
+
+# fichier de variables d'environnement dotenv
+.env
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+Sortie de construction # Next.js
+.suivant
+en dehors
+
+# Nuxt.js construit / génère une sortie
+.nuxt
+dist
+
+# Fichiers Gatsby
+.cache /
+# Commentez dans la ligne publique si votre projet utilise Gatsby et non Next.js
+# https://nextjs.org/blog/next-9-1#public-directory-support
+# public
+
+# sortie de construction vuepress
+.vuepress / dist
+
+# Répertoires sans serveur
+.serveur /
+
+# Cache FuseBox
+.fusebox /
+
+# Fichiers locaux DynamoDB
+.dynamodb /
+
+# Fichier de port TernJS
+.tern-port
+
+# Stocke les versions de VSCode utilisées pour tester les extensions VSCode
+.vscode-test
+
+# fil v2
+.yarn / cache
+.yarn / débranché
+.yarn / build-state.yml
+.yarn / install-state.gz
+.pnp. *
