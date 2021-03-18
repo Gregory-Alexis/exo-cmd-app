@@ -1,10 +1,8 @@
-
 const readlineSync = require('readline-sync')
-
-
-let prenom = readlineSync.question('Bonjour, quel est votre prénom ?')
-let nom = readlineSync.question('Quel est votre nom ?')
-let age = readlineSync.question('Quel est votre age ?')
+const prenom = readlineSync.question('Quel est votre prénom ?')
+const nom = readlineSync.question('Quel est votre nom ?')
+const ageStr = readlineSync.question('Quel age avez vous ?')
+const age = Number(ageStr)
 
 
 
@@ -14,4 +12,7 @@ if (age < 18) {
 } else {
   console.log(`${prenom} ${nom}, vous êtes majeur, vous pouvez voter`)
 }
-// Il manque les vérifs mais je n'ai pas réussi a le avec
+
+
+
+
