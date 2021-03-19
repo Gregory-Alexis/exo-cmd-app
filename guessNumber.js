@@ -14,9 +14,6 @@ if (isNaN(process.argv[2])) {
 
 const numKey = Number(process.argv[2])
 
-
-
-
 let question1 = readlineSync.keyInYN('Bienvenue user1, vous devez trouver le nombre exact, voules vous jouer ?')
 
 while (true) {
@@ -29,8 +26,6 @@ while (true) {
     console.log(`Sorry, ${question2} is not a number`)
     process.exit(1)
   }
-
-
 
   if (userNum > numKey) {
     console.log(chalk.red('Nombre trop grand'))
