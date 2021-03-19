@@ -68,7 +68,7 @@ if (rep5[index] === 'Vrai') {
 console.log('')
 
 if (totalPoint < 3) {
-  console.log(`Vous avez obtenu un score de ${totalPoint} ${totalPoint < 1 ? 'point' : 'points'} , hélas ce n'est pas assez, continuez de vous entraîner`)
+  console.log(`Vous avez obtenu un score de ${totalPoint} ${totalPoint < 2 ? 'point' : 'points'} , hélas ce n'est pas assez, continuez de vous entraîner`)
 }
 else if (totalPoint === 3) {
   console.log(`Vous avez obtenu un score de ${totalPoint} points, c'est pas mal mais vous pouvez mieux faire`)
