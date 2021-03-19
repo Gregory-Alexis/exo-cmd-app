@@ -14,7 +14,7 @@ if (isNaN(process.argv[2])) {
 
 const numKey = Number(process.argv[2])
 
-let question1 = readlineSync.keyInYN('Bienvenue user1, vous devez trouver le nombre exact, voules vous jouer ?')
+const question1 = readlineSync.keyInYN('Bienvenue user1, vous devez trouver le nombre exact, voules vous jouer ?')
 
 while (true) {
 
