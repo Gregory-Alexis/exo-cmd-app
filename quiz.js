@@ -1,0 +1,77 @@
+const readlineSync = require('readline-sync')
+
+let totalPoint = 0
+
+question1 = readlineSync.question(' Le C++ est un: (press "enter" to see the options)')
+rep1 = ['Langage', 'Compilateur'],
+  index = readlineSync.keyInSelect(rep1, 'Choississez votre réponse');
+console.log(rep1[index]);
+if (rep1[index] === 'Langage') {
+  console.log('Bonne réponse')
+  totalPoint++
+} else {
+  console.log('Mauvaise réponse')
+}
+
+console.log('')
+
+question2 = readlineSync.question('TypeScript est une évolution de Javascript: (press "enter" to see the options)')
+rep2 = ['Vrai', 'Faux'],
+  index = readlineSync.keyInSelect(rep2, 'Choississez votre réponse');
+console.log(rep2[index]);
+if (rep2[index] === 'Vrai') {
+  console.log('Bonne réponse')
+  totalPoint++
+} else {
+  console.log('Mauvaise réponse')
+}
+
+console.log('')
+
+question3 = readlineSync.question('Lire les cours avant de faire les exercices est inutile: (press "enter" to see the options)')
+rep3 = ['Vrai', 'Faux'],
+  index = readlineSync.keyInSelect(rep3, 'Choississez votre réponse');
+console.log(rep3[index]);
+if (rep3[index] === 'Faux') {
+  console.log('Bonne réponse')
+  totalPoint++
+} else {
+  console.log('Mauvaise réponse')
+}
+
+console.log('')
+
+question4 = readlineSync.question('React.js a été developpé par Google: (press "enter" to see the options)')
+rep4 = ['Vrai', 'Faux'],
+  index = readlineSync.keyInSelect(rep4, 'Choississez votre réponse');
+console.log(rep4[index]);
+if (rep4[index] === 'Faux') {
+  console.log('Bonne réponse')
+  totalPoint++
+} else {
+  console.log('Mauvaise réponse')
+}
+
+console.log('')
+
+question5 = readlineSync.question('Ethereum est une blockchain publique: (press "enter" to see the options)')
+rep5 = ['Vrai', 'Faux'],
+  index = readlineSync.keyInSelect(rep5, 'Choississez votre réponse');
+console.log(rep5[index]);
+if (rep5[index] === 'Vrai') {
+  console.log('Bonne réponse')
+  totalPoint++
+} else {
+  console.log('Mauvaise réponse')
+}
+
+console.log('')
+
+if (totalPoint < 3) {
+  console.log(`Vous avez obtenu un score de ${totalPoint} points, hélas ce n'est pas assez, continuez de vous entraîner`)
+}
+else if (totalPoint === 3) {
+  console.log(`Vous avez obtenu un score de ${totalPoint} points, c'est pas mal mais vous pouvez mieux faire`)
+} else {
+  console.log(`Vous avez obtenu un score de ${totalPoint} points. Bravo, vous avez passé le test haut la main`)
+}
