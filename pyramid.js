@@ -3,15 +3,16 @@ if (process.argv.length < 4 || process.argv.length > 5) {
   process.exit(1)
 }
 
+if (isNaN(process.argv[2])) {
+  console.log(`Error: ${process.argv[2]} is not a number.`)
+  process.exit(1)
+}
+
 if (!isNaN(process.argv[3])) {
   console.log(`Error: ${process.argv[3]} is not a string.`)
   process.exit(1)
 }
 
-if (isNaN(process.argv[2])) {
-  console.log(`Error: ${process.argv[2]} is not a number.`)
-  process.exit(1)
-}
 if (!isNaN(process.argv[4])) {
   console.log(`Error: ${process.argv[4]} is not a string.`)
   process.exit(1)
