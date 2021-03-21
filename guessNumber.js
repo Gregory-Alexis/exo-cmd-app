@@ -12,7 +12,6 @@ const secretNum = readlineSync.question('Please user1, enter a secret number: ',
 
 while (true) {
 
-
   const userNum = readlineSync.question('User2, choose a number: ')
 
   if (userNum < secretNum) {
