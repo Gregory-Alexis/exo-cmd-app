@@ -1,39 +1,27 @@
-
-const chalk = require('chalk')
 const readlineSync = require('readline-sync')
+const chalk = require('chalk')
 
-if (process.argv.length !== 3) {
-  console.log('usage: node guessNumber.js num')
+if (readlineSync.keyInYN('The goal is to find a secret number. Do you want to play ?')) {
+  console.log(chalk.blue('Installing the game...'))
+} else {
+  console.log(chalk.red('Too bad, see you later'))
   process.exit(1)
 }
 
-if (isNaN(process.argv[2])) {
-  console.log(`Error: ${process.argv[2]} is not a number`)
-  process.exit(1)
-}
-
-const numKey = Number(process.argv[2])
-
-const question1 = readlineSync.keyInYN('Bienvenue user1, vous devez trouver le nombre exact, voules vous jouer ?')
+const secretNum = readlineSync.question('Please user1, enter a secret number: ', { hideEchoBack: true })
 
 while (true) {
 
-  let question2 = readlineSync.question('Quel numéro chosissez vous ?')
 
-  const userNum = Number(question2)
+  const userNum = readlineSync.question('User2, choose a number: ')
 
-  if (isNaN(question2)) {
-    console.log(`Sorry, ${question2} is not a number`)
-    process.exit(1)
-  }
-
-  if (userNum > numKey) {
-    console.log(chalk.red('Nombre trop grand'))
-  } else if (userNum < numKey) {
+  if (userNum < secretNum) {
     console.log(chalk.red('Nombre trop petit'))
+  } else if (userNum > secretNum) {
+    console.log(chalk.red('Nombre trop grand'))
   } else {
-    console.log(chalk.green('Bravo!'))
-    break;
+    console.log(chalk.green('Bravo'))
+    process.exit(1)
   }
 }
 
