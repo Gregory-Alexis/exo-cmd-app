@@ -18,6 +18,9 @@ if (!isNaN(process.argv[4])) {
   process.exit(1)
 }
 
+if (process.argv.length === 5 && process.argv[4] !== '-r') {
+  console.log(`Error: ${process.argv[4]} is not the correct reverse string`)
+}
 
 
 const pyramid = (nbBase, string, r) => {
