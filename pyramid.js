@@ -20,6 +20,7 @@ if (!isNaN(process.argv[4])) {
 
 if (process.argv.length === 5 && process.argv[4] !== '-r') {
   console.log(`Error: ${process.argv[4]} is not the correct reverse string`)
+  process.exit(1)
 }
 
 
@@ -29,7 +30,7 @@ const pyramid = (nbBase, string, r) => {
       console.log(string.repeat(i))
     }
   }
-  else if (process.argv[4] === '-r') {
+  else {
     for (let i = nbBase; i >= 1; i--) {
       console.log(string.repeat(i))
     }
@@ -37,8 +38,8 @@ const pyramid = (nbBase, string, r) => {
 }
 
 
-nbBase = Number(process.argv[2])
-string = process.argv[3]
-r = process.argv[4]
+const nbBase = Number(process.argv[2])
+const string = process.argv[3]
+const r = process.argv.length === 5 ? true : false
 
 pyramid(nbBase, string, r)
