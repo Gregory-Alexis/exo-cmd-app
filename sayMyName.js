@@ -4,5 +4,5 @@ if (process.argv.length !== 3) {
   process.exit(1)
 }
 
-const name = process.argv[2]
-console.log(`My name is ${name}`)
+
+console.log(`My name is ${process.argv[2]}`)
